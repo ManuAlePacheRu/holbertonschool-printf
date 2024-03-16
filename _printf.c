@@ -55,6 +55,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(pa);
-	_putchar('\n');
-	return (0);
+	return (j);
 }
