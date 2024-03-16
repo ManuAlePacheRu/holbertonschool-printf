@@ -1,11 +1,13 @@
-#ifndef
-#define
-
-#include <stdlib.h>
-#include <stdio.h>
+#ifndef _HEADER_
+#define _HEADER_
 #include <stdarg.h>
-#include <string.h>
-
+typedef struct print
+{
+	char*p;
+	int (*f)(va_list);
+}pp;
 int _printf(const char *format, ...);
-
-#endif
+int _putchar(char c);
+int printc(val_list c);
+int prints(vla_list s);
+#endif 
