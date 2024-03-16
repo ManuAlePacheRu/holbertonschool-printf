@@ -1,14 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  *
  */
 
-char prints(char *str)
+int prints(va_list s)
 {
+	char *str = va_arg(s, char *);
 	int i;
 	for (i = 0; str[i] != '\0'; i++)
-		putchar(str[i]);
+		_putchar(str[i]);
 	
-return (0);
+return (i);
 }
