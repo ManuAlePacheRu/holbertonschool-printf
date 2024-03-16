@@ -46,6 +46,10 @@ int _printf(const char *format, ...)
 			else
 			{
 				f = spec(&format[i + 1]);
+				if (f == NULL)
+				{
+					return (-1);
+				}
 				i += 2;
 				j += f(pa);
 				continue;
