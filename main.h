@@ -8,6 +8,6 @@ typedef struct print
 }pp;
 int _printf(const char *format, ...);
 int _putchar(char c);
-int printc(val_list c);
-int prints(vla_list s);
+int printc(va_list c);
+int prints(va_list s);
 #endif 
