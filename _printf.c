@@ -3,19 +3,19 @@
 
 int (*spec(const char *format))(va_list)
 {
-	int i;
-	pp p[] = {
+	int i = 0;
+	pp a[] = {
 		{"c", printc},
 		{"s", prints},
 		{NULL, NULL}
 	};
 	
-	for (i = 0; p[i].p != NULL; i++)
+	for (; a[i].p != NULL; i++)
 	{
-		if (*(p[i].p) == *format)
+		if (*(a[i].p) == *format)
 			break;
 	}
-	return (p[i].f);
+	return (a[i].f);
 }
 
 int _printf(const char *format, ...)
