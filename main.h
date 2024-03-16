@@ -1,6 +1,7 @@
 #ifndef _HEADER_
 #define _HEADER_
 #include <stdarg.h>
+#include <stdio.h>
 typedef struct print
 {
 	char*p;
