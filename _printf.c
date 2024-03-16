@@ -24,6 +24,10 @@ int _printf(const char *format, ...)
 	unsigned int i = 0, j = 0;
 	int (*f)(va_list);
 
+	if (format == NULL)
+	{
+		return (-1);
+	}
 	va_start(pa, format);
 	while (format && format[i])
 	{
