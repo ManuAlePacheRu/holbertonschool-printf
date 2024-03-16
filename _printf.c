@@ -40,14 +40,6 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (format[i + 1] == '\0')
-			{
-				return (-1);
-			}
-			i++;
-			while (format[i] == ' ')
-				i++;
-
 			if (format[i + 1] == '%')
 			{
 				_putchar('%');
