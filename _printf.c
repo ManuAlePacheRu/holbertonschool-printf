@@ -21,7 +21,7 @@ int (*spec(const char *format))(va_list)
 int _printf(const char *format, ...)
 {
 	va_list pa;
-	int i = 0, j = 0;
+	unsigned int i = 0, j = 0;
 	int (*f)(va_list);
 
 	va_start(pa, format);
