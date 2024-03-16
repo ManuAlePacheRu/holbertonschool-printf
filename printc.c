@@ -1,13 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  *
  */
 
-char printc(char let)
-
+int printc(va_list c)
 {
-	putchar(let);
-
-	return (let);
+	char ch = va_arg(c, int);
+	_putchar(ch);
+	return (0);
 }
