@@ -29,11 +29,11 @@ int (*spec(const char *format))(va_list)
  * _print_f - printing function
  * @format: is a valid %
  * @pa: variadic list
- *
  * Return: variable with all information
  */
 
-int _printf_f(const char *format, va_list pa)
+int
+_printf_f(const char *format, va_list pa)
 {
 	unsigned int i = 0, j = 0;
 	int (*f)(va_list);
