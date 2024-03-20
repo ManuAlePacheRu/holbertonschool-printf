@@ -20,7 +20,7 @@ int printi(va_list i)
 	while (n > 9)
 	{
 		n /= 10;
-		i++;
+		d++;
 	}
 
 	r_int(m);
