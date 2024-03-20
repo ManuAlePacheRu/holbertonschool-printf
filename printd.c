@@ -10,7 +10,7 @@ int printd(va_list d)
 	int j, m = 1000000000, n, count = 0, sum = 0;
 
 	n = va_arg(d, int);
-	if (n < 10)
+	if (n < 0)
 	{
 		n *= -1;
 		_putchar('-');
