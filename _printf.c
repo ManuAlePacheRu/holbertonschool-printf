@@ -57,9 +57,10 @@ int _printf(const char *format, ...)
 					f = spec(&format[i + 1]);
 					if (f == NULL)
 					{
+						_putchar('\n');
 						_putchar('%');
 						_putchar(format[i + 1]);
-						return (0);
+						return (-1);
 					}
 					i += 2;
 					j += f(pa);
