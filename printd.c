@@ -6,35 +6,36 @@
 
 int printd(va_list d)
 {
-	int a[10];
-	int j, m = 1000000000, n, count = 0, sum = 0;
+	int i = 1, m = 0;
+	unsigned int n = 0;
 
 	n = va_arg(d, int);
-	if (n < 0)
+	m = n;
+
+	if (m < 0)
 	{
-		n *= -1;
 		_putchar('-');
-		count++;
+		m *= -1;
+		n = m;
+		i++;
 	}
 
-	a[0] = n / m;
-
-	for (j = 1; j < 10; j++)
+	while (n > 9)
 	{
-		m /= 10;
-		a[j] = (n / m) % 10;
+		n /= 10;
+		i++;
 	}
 
-	for (j = 0; j < 10; j++)
-	{
-		sum += a[j];
-		if (sum != 0 || j == 9)
-		{
-			_putchar('0' + a[j]);
-			count++;
-		}
-	}
+	r_int(m);
+	return (i);
+}
 
-	return (count);
+void r_int(int a)
+{
+	unsigned int t;
 
+	t = a;
+	if (t / 10)
+		r_int(t / 10);
+	_putchar(t % 10 + '0');
 }
