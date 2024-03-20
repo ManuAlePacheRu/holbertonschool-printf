@@ -60,6 +60,7 @@ int _printf(const char *format, ...)
 					{
 						j += _putchar('%');
 						j += _putchar(format[i + 1]);
+						j += _putchar('\n');
 						return (j);
 					}
 					i += 2;
