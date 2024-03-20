@@ -14,7 +14,7 @@ int printi(va_list i)
 		_putchar('-');
 		m *= -1;
 		n = m;
-		i++;
+		d++;
 	}
 
 	while (n > 9)
