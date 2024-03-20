@@ -4,7 +4,7 @@
 #include <stdio.h>
 /**
  * stuct print - struct %
- * @p: check char 
+ * @p: check char
  * @f: the pointer function
  */
 typedef struct print
