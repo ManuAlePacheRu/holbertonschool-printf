@@ -1,5 +1,11 @@
 #include "main.h"
 #include <stdarg.h>
+/**
+ *spec - check if is a correct %
+ *@format: valid %
+ *Return: pointer to function or NULL
+ */
+
 int (*spec(const char *format))(va_list)
 {
 	int i = 0;
@@ -18,6 +24,12 @@ int (*spec(const char *format))(va_list)
 	}
 	return (a[i].f);
 }
+
+/*
+ * _print_f - printing function
+ * @format: is a valid %
+ * Return: variable with all information
+ */
 int _printf_f(const char *format, va_list pa)
 {
 	unsigned int i = 0, j = 0;

@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * r_int - print integer aux
+ * @a: integer to print
+ * Return: void
+ */
 void r_int(int a)
 {
 	unsigned int t;

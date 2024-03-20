@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "main.h"
 
+/**
+ * _printf - function for format printing
+ * @format: list of arguments to printing
+ * Return: charecter printing
+ */
 int _printf(const char *format, ...)
 {
 	va_list pa;

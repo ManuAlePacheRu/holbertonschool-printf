@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- *
+ * prints - function to print a string
+ * @s: string to print
+ * Return: i
  */
 
 int prints(va_list s)

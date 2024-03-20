@@ -1,6 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
-
+/*
+ * printi - A function a integer
+ * @i: list of variadic argument
+ * Return: lenght
+ */
 int printi(va_list i)
 {
 	int d = 1, m = 0;

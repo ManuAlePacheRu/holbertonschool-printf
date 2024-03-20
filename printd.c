@@ -1,7 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- *
+ *printd - function to integer
+ *@d: variadic function list
+ *Return: number of digit to print
  */
 
 int printd(va_list d)

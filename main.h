@@ -2,6 +2,11 @@
 #define _HEADER_
 #include <stdarg.h>
 #include <stdio.h>
+/**
+ * stuct print - struct %
+ * @p: check char 
+ * @f: the pointer function
+ */
 typedef struct print
 {
 	char *p;
