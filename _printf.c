@@ -59,6 +59,7 @@ int _printf(const char *format, ...)
 					{
 						_putchar('%');
 						_putchar(format[i + 1]);
+						return (0);
 					}
 					i += 2;
 					j += f(pa);
