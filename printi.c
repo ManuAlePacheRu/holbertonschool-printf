@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 
-/*
+/**
  * printi - A function a integer
  * @i: list of variadic argument
  *
