@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdarg.h>
-
 int (*spec(const char *format))(va_list)
 {
 	int i = 0;
@@ -19,7 +18,6 @@ int (*spec(const char *format))(va_list)
 	}
 	return (a[i].f);
 }
-
 int _printf(const char *format, ...)
 {
 	va_list pa;
@@ -27,9 +25,7 @@ int _printf(const char *format, ...)
 	int (*f)(va_list);
 
 	if (format == NULL)
-	{
 		return (-1);
-	}
 	va_start(pa, format);
 	while (format && format[i])
 	{
@@ -43,9 +39,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			if (format[i + 1] == '\0')
-				{
 					return (-1);
-				}
 			if (format[i + 1] == '%')
 			{
 				_putchar('%');
@@ -66,10 +60,8 @@ int _printf(const char *format, ...)
 					i += 2;
 					j += f(pa);
 					continue;
-
 			}
 		}
-
 		i++;
 	}
 	va_end(pa);
