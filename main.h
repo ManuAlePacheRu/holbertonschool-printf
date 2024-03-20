@@ -4,9 +4,9 @@
 #include <stdio.h>
 typedef struct print
 {
-	char*p;
+	char *p;
 	int (*f)(va_list);
-}pp;
+} pp;
 int _printf(const char *format, ...);
 int _putchar(char c);
 int printc(va_list c);
@@ -14,4 +14,4 @@ int prints(va_list s);
 int printd(va_list d);
 int printi(va_list i);
 void r_int(int a);
-#endif 
+#endif
