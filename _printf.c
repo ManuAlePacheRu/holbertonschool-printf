@@ -7,6 +7,7 @@ int (*spec(const char *format))(va_list)
 	pp a[] = {
 		{"c", printc},
 		{"s", prints},
+		{"d", printd},
 		{NULL, NULL}
 	};
 	
