@@ -49,7 +49,6 @@ int _printf(const char *format, ...)
 			else
 			{
 				j += p_f(format, pa, i, j);
-				continue;
 			}
 		}
 		i++;
