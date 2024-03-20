@@ -4,79 +4,37 @@
  *
  */
 
-void reverse(char str[], int length)
+int printd(va_list d)
 {
-    int start;
-    int end = length -1;
-for(start = 0; start < end; ++start, --end)
-{
-	const char ch = str[start];
-	str[start] = str[end];
-	str[end] = ch;
-}
-}
+	int a[10];
+	int j, m = 1000000000, n, count = 0, sum = 0;
 
-char* _itoa(int num, char* str, int base)
-{
-    int i = 0;
-    char isNegNum = 0;
-    /*Handle 0 explicitly, 
-      otherwise empty string is printed for 0 */
-    if (num == 0)
-    {
-        str[i++] = '0';
-        str[i] = '\0';
-    }
-    else
-    {
-        // In library itoa function -ve numbers handled only with
-        // base 10. SO here we are also following same concept
-        if ((num < 0) && (base == 10))
-        {
-            isNegNum = 1;
-            num = -num; // make num positive
-        }
-        // Process individual digits
-        do
-        {
-            const int rem = (num % base);
-            str[i++] = (rem > 9)? ((rem-10) + 'a') : (rem + '0');
-            num = num/base;
-        }
-        while (num != 0);
-        // If number is negative, append '-'
-        if (isNegNum)
-        {
-            str[i++] = '-';
-        }
-        // Append string terminator
-        str[i] = '\0';
-        // Reverse the string
-        reverse(str, i);
-    }
-    return str;
-}
+	n = va_arg(d, int);
+	if (n < 10)
+	{
+		n *= -1;
+		_putchar('-');
+		count++;
+	}
 
-int printd()
-{
-	int i;
-	char r;
-	char *str = 0;
-	str = malloc(10 * sizeof(int));
+	a[0] = n / m;
 
-		for (i = 48; i <= 57; i++)
-		{	
-			str[r] = r;
-			r = _itoa(0, str, 10);
+	for (j = 1; j < 10; j++)
+	{
+		m /= 10;
+		a[j] = (n / m) % 10;
+	}
+
+	for (j = 0; j < 10; j++)
+	{
+		sum += a[j];
+		if (sum != 0 || j == 9)
+		{
+			_putchar('0' + a[j]);
+			count++;
 		}
+	}
 
-	putchar(str[r]);
-return (r);
-}
+	return (count);
 
-int main()
-{
-	char *str = "Hola2324";
-	_itoa(7, str, 10);
-	return (0);
 }
