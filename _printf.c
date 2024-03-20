@@ -8,6 +8,7 @@ int (*spec(const char *format))(va_list)
 		{"c", printc},
 		{"s", prints},
 		{"d", printd},
+		{"i", printi},
 		{NULL, NULL}
 	};
 	
