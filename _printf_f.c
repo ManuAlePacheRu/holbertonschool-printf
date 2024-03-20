@@ -25,7 +25,7 @@ int (*spec(const char *format))(va_list)
 	return (a[i].f);
 }
 
-/*
+/**
  * _print_f - printing function
  * @format: is a valid %
  * @pa: variadic list
