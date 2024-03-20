@@ -23,8 +23,6 @@ int _printf_f(const char *format, va_list pa)
 	unsigned int i = 0, j = 0;
 	int (*f)(va_list);
 
-	if (format == NULL)
-		return (-1);
 	while (format && format[i])
 	{
 		if (format[i] != '%')
