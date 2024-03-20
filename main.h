@@ -12,4 +12,5 @@ int _putchar(char c);
 int printc(va_list c);
 int prints(va_list s);
 int printd(va_list d);
+void r_int(int a);
 #endif 
