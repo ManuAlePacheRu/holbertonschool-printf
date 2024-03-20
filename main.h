@@ -14,4 +14,5 @@ int prints(va_list s);
 int printd(va_list d);
 int printi(va_list i);
 void r_int(int a);
+int p_f(const char *format, va_list pa, int i, int j);
 #endif
