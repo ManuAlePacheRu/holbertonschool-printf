@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 {
 	va_list pa;
 	unsigned int i = 0, j = 0;
+	int (*f)(va_list);
 
 	if (format == NULL)
 		return (-1);
@@ -48,27 +49,21 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				j += p_f(format, pa, i, j);
+				f = spec(&format[i + 1]);
+				if (f == NULL)
+				{
+					j += _putchar('%');
+					j += _putchar(format[i + 1]);
+					j += _putchar('\n');
+					return (j);
+				}
+				i += 2;
+				j += f(pa);
+				continue;
 			}
 		}
 		i++;
 	}
 	va_end(pa);
-	return (j);
-}
-int p_f(const char *format, va_list pa, int i, int j)
-{
-	int (*f)(va_list);
-	
-	f = spec(&format[i + 1]);
-	if (f == NULL)
-	{
-		j += _putchar('%');
-		j += _putchar(format[i + 1]);
-		return (j);
-	}
-	i += 2;
-	j += f(pa);
-
 	return (j);
 }
