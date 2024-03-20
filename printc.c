@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- *
+ * printc - function to print string
+ * @c: variadic list
+ * Return: 1 al succes
  */
 
 int printc(va_list c)
